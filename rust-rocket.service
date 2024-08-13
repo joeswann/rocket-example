@@ -1,0 +1,12 @@
+[Unit]
+Description=Rust Rocket Web Server
+After=network.target
+
+[Service]
+ExecStart=/home/joe/dev/web/target/release/rust-web
+WorkingDirectory=/home/joe/dev/web
+User=joe
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
